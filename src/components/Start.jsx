@@ -75,7 +75,7 @@ const Start = () => {
   const navigate = useNavigate();
 
   const browser = detectBrowser();
- 
+
   //from context.jsx
   const { startGame } = useCtx();
 
@@ -93,7 +93,7 @@ const Start = () => {
           ease: "expo.out",
           duration: 1,
           delay: 0.3,
-        }
+        },
       );
     };
 
@@ -125,14 +125,56 @@ const Start = () => {
         <section className={classes["start-page"]}>
           <div className={classes["card"]}>
             <div className={classes["welcome-text"]}>
-              <h2>Induljon a játékos pénzügyi utazás!</h2>
-              <p>
-                Olvasd be a QR-kódot, válaszolj a kvízre, és ha jól teljesítesz,
-                a térkép segít továbblépni.
+              <h2>Péntek délután van.</h2>
+
+              <p>Az osztály végre megszervezte az év buliját.</p>
+              <div className={classes["p"]}>
+                <p>Van zene.</p>
+                <p>Van nasi.</p>
+                <p>Van gyümölcs.</p>
+                <p>Van torta.</p>
+              </div>
+
+              <p className={classes["p"]}>
+                <strong>Vagyis… volt torta.</strong>
               </p>
+
+              <p className={classes["p"]}>
+                Amikor mindenki megérkezett, a torta helyén csak egy boríték
+                hevert.
+              </p>
+
+              <p>A borítékon ez állt:</p>
+
+              <blockquote>„Az osztály még nem áll készen a bulira.”</blockquote>
+
+              <p>Bent egy újabb üzenet:</p>
+
+              <blockquote className={classes["p"]}>
+                <p>„A tortát biztonságos helyre vittem.</p>
+
+                <p>Nem azért, mert valaki rosszat tett.</p>
+
+                <p>Hanem azért, mert elfelejtettetek valamit.</p>
+
+                <div className={classes["p"]}>
+                  <p>Az osztályban mindenki más valamiben:</p>
+                  <p>van, aki gyors,</p>
+                  <p>van, aki kreatív,</p>
+                  <p>van, aki jó megfigyelő,</p>
+                  <p>van, aki jó szervező.</p>
+                </div>
+
+                <p>
+                  De amíg mindenki csak a saját csapatával foglalkozik, addig
+                  hiányzik a legfontosabb hozzávaló.
+                </p>
+
+                <p>Ha megtaláljátok, visszakapjátok a tortát.”</p>
+              </blockquote>
+
               <p>
-                Szórakozva tanulhatod meg, hogyan gazdálkodj okosan a
-                zsebpénzeddel.
+                <strong>– MÓ A Tortamester</strong>
               </p>
             </div>
             <div onClick={handleStart} className={classes["btn-container"]}>

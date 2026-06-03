@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import LastQuestion from '../components/LastQuestion'
+import LastQuestion from "../components/LastQuestion";
+import Puzzle from "../components/puzzle/Puzzle";
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
 const LastQuestionPage = () => {
   return (
-    <LastQuestion /> // Render the LastQuestion component
-  )
+    <Puzzle /> // Render the LastQuestion component
+  );
+};
 
-}
-
-export default LastQuestionPage
+export default LastQuestionPage;

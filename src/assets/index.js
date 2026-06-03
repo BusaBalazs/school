@@ -45,3 +45,27 @@ export const maps = [
 //----------------------------------------------------------------
 
 export const money = [money_0, money_1, money_2, money_3, money_4, money_5];
+
+//------------------------------------------------------
+// DEMO MAPS
+import pic_0 from "./tree/tree_0.webp";
+import pic_1 from "./tree/tree_1.webp";
+import pic_2 from "./tree/tree_2.webp";
+import pic_3 from "./tree/tree_3.webp";
+import pic_4 from "./tree/tree_4.webp";
+import pic_5 from "./tree/tree_5.webp";
+import pic_6 from "./tree/tree_6.webp";
+import pic_7 from "./tree/tree_7.webp";
+import pic_8 from "./tree/tree_8.webp";
+
+export const images = [
+  pic_0,
+  pic_1,
+  pic_2,
+  pic_3,
+  pic_4,
+  pic_5,
+  pic_6,
+  pic_7,
+  pic_8,
+];

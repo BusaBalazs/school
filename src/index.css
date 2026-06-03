@@ -28,10 +28,12 @@
   --font-size-xl: clamp(2rem, 12vw, 3.5rem);
 
   /*** FONT-FAMILY ***/
-  --font-title: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans",
-    Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-regular: "Inter", system-ui, -apple-system, Segoe UI, Roboto,
-    "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-title:
+    "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  --font-regular:
+    "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
 
   /*** COLORS ***/
   --color-gray: rgb(42, 42, 42);
@@ -52,9 +54,11 @@
   --ok: #22c55e;
   --warn: #f59e0b;
   --white: #ffffff;
+  --dark: #2e2e2e;
   --shadow: 0 10px 20px rgba(11, 58, 116, 0.15);
 
-  --color-bg: radial-gradient(
+  --color-bg:
+    radial-gradient(
       1200px 500px at 80% -10%,
       var(--blue-300) 0%,
       transparent 60%
@@ -81,8 +85,8 @@
 body {
   width: 100%;
   min-height: 100vmax;
-   color: var(--blue-900);
-  background: var(--color-bg);
+  color: var(--blue-900);
+  background: url("./assets/bg_blur.png");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: var(--font-regular);
