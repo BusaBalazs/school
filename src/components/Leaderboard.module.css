@@ -1,0 +1,46 @@
+.header-contaier {
+  margin-bottom: 3em;
+}
+
+.header-contaier h2 {
+  font-size: var(--font-size-l);
+  font-family: var(--font-title);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-orage-100);
+}
+
+.magic-wand-img {
+  width: 80%;
+  margin: auto;
+}
+
+.list-item span {
+  font-size: 1.2rem;
+}
+
+.users-list li:nth-child(even) {
+  background-color: var(--color-alpha-orage-50);
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .8em;
+  color: var(--color-white);
+  margin-bottom: 1em;
+}
+
+.user span:first-child {
+  color: var(--color-orage-100);
+  margin-right: 1em;
+}
+
+.leader-board-btn {
+  position: sticky;
+  bottom: 1px;
+  left: calc(50% - 60px);
+  z-index: 120;
+}

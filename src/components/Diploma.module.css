@@ -1,0 +1,84 @@
+/***************************************************
+diploma page **************************************/
+
+.diploma-section-bg {
+  min-height: 100%;
+  padding: 4em 0.5em;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.diploma-section-bg::before,
+.diploma-section-bg::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(1px);
+  border: 1px solid rgba(10, 10, 10, 0.705);
+}
+.diploma-section-bg::before {
+  width: 260px;
+  height: 260px;
+  right: -60px;
+  top: -60px;
+  background: radial-gradient(
+    circle at 35% 35%,
+    var(--blue-300),
+    var(--blue-500)
+  );
+  opacity: 0.12;
+}
+.diploma-section-bg::after {
+  width: 350px;
+  height: 350px;
+  left: -40px;
+  bottom: -40px;
+  background: radial-gradient(circle at 40% 40%, #ffd76a, #f0b515);
+  opacity: 0.18;
+  box-shadow: 0 0 0 10px rgba(255, 215, 106, 0.15);
+}
+
+.diploma-text-container {
+  font-family: var(--font-title);
+  font-weight: 400;
+  width: 100%;
+  padding: 0 1em;
+  top: 25%;
+}
+
+.header-container {
+  margin-bottom: 2em;
+}
+
+.header-container h2 {
+  font-size: 1.7rem;
+  font-family: var(--font-title);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.diploma-container {
+  margin-top: 2em;
+  border-top: 1px solid var(--blue-900);
+}
+
+.diploma-text {
+  font-size: var(--font-size-m);
+  margin-bottom: 0.8em;
+  font-weight: 600;
+}
+
+.time {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  margin: 2em auto 0.5em auto;
+  padding: 0.8em;
+  background-color: var(--green-400);
+  color: var(--white);
+  font-weight: 700;
+  border-radius: var(--border-radius-xl);
+}

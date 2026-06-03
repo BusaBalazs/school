@@ -1,0 +1,31 @@
+.process-container {
+  margin-top: 0.2em;
+}
+
+.num-of-question {
+  position: absolute;
+  left: calc(50% - 40px);
+  color: var(--color-black);
+  z-index: 50;
+}
+
+.process-lines-container {
+  position: relative;
+}
+
+.process-indicator-white {
+  display: block;
+  width: 100%;
+  height: 24px;
+  background-color: #d4e4ff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.process-indicator-blue {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 24px;
+  background: linear-gradient(90deg, var(--green-400), var(--green-200));
+  z-index: 20;
+}
