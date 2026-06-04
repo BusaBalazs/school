@@ -57,7 +57,7 @@ export const question = [
   {
     id: 3,
     question:
-      "A desszert elkészítése 45 perc, majd 2 órát hűl. Ha 15:30-kor kezdték, mikor lesz kész? (ÓÓ:PP)",
+      "A desszert elkészítése: összedolgozás 15 perc, formázás 20 perc, hempergetés 10 perc, majd 2 órát hűl. Ha 15:30-kor kezdték, mikor lesz kész? (ÓÓ:PP)",
     operation: "",
     rightAnswer: "18:15",
   },

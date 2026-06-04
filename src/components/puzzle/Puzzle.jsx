@@ -106,7 +106,7 @@ const Puzzle = () => {
       </div>
       {isOver.length === 9 && (
         <>
-          <h2 className="bg-amber-50/40 p-4  text-center text-cyan-950 text-[1.3rem] font-extrabold">
+          <h2 className="bg-amber-50/40 p-4  text-center text-cyan-950 text-[1.3rem] font-extrabold mt-4 py-3">
             Szuper ügyes vagy 😊! Keresd meg a JÁTÉKMESTERT!!!
           </h2>
         </>
