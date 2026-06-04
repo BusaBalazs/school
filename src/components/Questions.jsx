@@ -293,7 +293,7 @@ const Questions = () => {
                 Ellenőriz
               </button>
               {inputError && (
-                <p className={classes["input-error"]}>
+                <p className="bg-red-500/80 text-white p-2 mt-2 rounded text-sm">
                   Nem jó válasz, próbáld újra.
                 </p>
               )}

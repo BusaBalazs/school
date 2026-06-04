@@ -80,13 +80,14 @@ const Puzzle = () => {
     <section className="game-bg-dark w-full h-screen pt-13 ">
       <div className="px-3 gsap-cards max-w-[480px] mx-auto">
         <DndContext onDragEnd={handleDragEnd}>
-          <div className="gsap-place grid grid-cols-3 grid-rows-3 ">
+          <div className="gsap-place grid grid-cols-3 grid-rows-3 gap-0.5">
             {PLACES.map((place) => (
               <Map
                 ref={(el) => (activeRef.current[place.id] = el)}
                 key={place.id}
                 place={place}
                 images={images}
+                isPlaced={isOver.includes(place.id)}
               />
             ))}
           </div>
