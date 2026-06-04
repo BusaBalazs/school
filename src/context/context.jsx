@@ -32,9 +32,8 @@ const shuffleArray = (array) => {
   }
   return array;
 };
-const questionOfNum = [0,1,2,3,4,5,6,7,8,9,10]
-const questionId = shuffleArray(questionOfNum);
-
+const questionOfNum = [0, 1, 2, 3, 4];
+const questionId = [0, 1, 2, 3, 4];
 
 //-----------------------------------------------------------
 //local storage functions
@@ -110,7 +109,7 @@ export function CtxProvider(props) {
           ...gameStatus,
           isStart: true,
           gameEnd: false,
-        })
+        }),
       );
     }
   };
@@ -191,8 +190,8 @@ export function CtxProvider(props) {
   const getFinalTime = (time) => {
     setFinalTime(
       `${displayTime(time.hour)}:${displayTime(time.min)}:${displayTime(
-        time.sec
-      )}`
+        time.sec,
+      )}`,
     );
   };
 

@@ -27,7 +27,7 @@ const shuffleArray = (array) => {
   return array;
 };
 
-question.map((item) => shuffleArray(item.answers));
+question.map((item) => item.answers && shuffleArray(item.answers));
 
 //-----------------------------------------------------------------
 // local storage functions
@@ -51,6 +51,8 @@ const Questions = () => {
   const [questionNum, setQuestionNum] = useState(0);
   const [feedback, setFeedback] = useState(ANSWER_FEEDBACK);
   const [questionId, setQuestionId] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+  const [inputError, setInputError] = useState(false);
 
   const btns = useRef([]);
   const questionRef = useRef();
@@ -79,6 +81,12 @@ const Questions = () => {
 
     setQuestionId(getStatus.questionId);
   }, []);
+
+  useEffect(() => {
+    setInputValue("");
+    setInputError(false);
+    setAnswerIsTrue(true);
+  }, [questionNum]);
 
   //--------------------------------------------------------------
 
@@ -124,6 +132,28 @@ const Questions = () => {
       btns.current[index].style.background = "rgba(194, 0, 0, 0.7)";
       setTimeout(() => {
         btns.current[index].style.background = "";
+        setAnswerIsTrue(true);
+      }, 1500);
+    }
+  };
+
+  const checkInputAnswer = (e) => {
+    e.preventDefault();
+    const currentQuestion = question[questionNum];
+    const submittedValue = inputValue.trim();
+    const expectedValue = currentQuestion.rightAnswer?.trim() ?? "";
+
+    if (
+      submittedValue.toLowerCase() === expectedValue.toLowerCase() &&
+      expectedValue !== ""
+    ) {
+      setInputError(false);
+      setAnswerIsTrue(true);
+      dialog.current.open();
+    } else {
+      setInputError(true);
+      setAnswerIsTrue(false);
+      setTimeout(() => {
         setAnswerIsTrue(true);
       }, 1500);
     }
@@ -194,6 +224,13 @@ const Questions = () => {
   };
 
   //--------------------------------------------------------------
+  const currentQuestion = question[questionNum];
+  const hasAnswers = Array.isArray(currentQuestion.answers);
+  const questionLines = currentQuestion.question
+    .replace(/([.!?][,]?)\s+/g, "$1\n")
+    .split("\n")
+    .filter(Boolean);
+
   return (
     <>
       <Modal
@@ -217,23 +254,52 @@ const Questions = () => {
             className={classes["question-container"]}
           >
             <div className={classes["question"]}>
-              <h2>{question[questionNum].question}</h2>
-              <code>{question[questionNum].operation}</code>
+              <h2>
+                {questionLines.map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    {index < questionLines.length - 1 && <br />}
+                  </span>
+                ))}
+              </h2>
+              <code>{currentQuestion.operation}</code>
             </div>
           </div>
-          <ul className={classes.list}>
-            {question[questionNum].answers.map((item, i) => (
-              <QuestionItem
-                key={item.answer}
-                CheckAnswer={(e, index = i) => isOk(e, index, item.right)}
-                isDisabled={!answerIsTrue ? true : false}
-                ref={(el) => (btns.current[i] = el)}
-                className="answer-gsap question-item"
-              >
-                {item.answer}
-              </QuestionItem>
-            ))}
-          </ul>
+          {hasAnswers ? (
+            <ul className={classes.list}>
+              {currentQuestion.answers.map((item, i) => (
+                <QuestionItem
+                  key={item.answer}
+                  CheckAnswer={(e, index = i) => isOk(e, index, item.right)}
+                  isDisabled={!answerIsTrue}
+                  ref={(el) => (btns.current[i] = el)}
+                  className="answer-gsap question-item"
+                >
+                  {item.answer}
+                </QuestionItem>
+              ))}
+            </ul>
+          ) : (
+            <form className={classes["input-question"]} onSubmit={checkInputAnswer}>
+              <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                className={classes["answer-input"]}
+                placeholder="Írd be a válaszodat"
+                disabled={!answerIsTrue}
+                className="bg-amber-50/60 answer-gsap rounded-lg"
+              />
+              <button type="submit" className="btn" disabled={!answerIsTrue}>
+                Ellenőriz
+              </button>
+              {inputError && (
+                <p className={classes["input-error"]}>
+                  Nem jó válasz, próbáld újra.
+                </p>
+              )}
+            </form>
+          )}
           {/* <Timer className={classes["timer-display"]} isEnd={isEnd} /> */}
         </div>
 

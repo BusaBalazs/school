@@ -107,7 +107,7 @@ const Puzzle = () => {
       {isOver.length === 9 && (
         <>
           <h2 className="bg-amber-50/40 p-4  text-center text-cyan-950 text-[1.3rem] font-extrabold">
-            Szuper ügyes vagy 😊! Megtaláltad az aranytojás rejtekhelyét!!!
+            Szuper ügyes vagy 😊! Keresd meg a JÁTÉKMESTERT!!!
           </h2>
         </>
       )}

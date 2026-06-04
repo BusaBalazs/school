@@ -1,222 +1,90 @@
-export const lastQuestions = {
-  id: 10,
-  question: "Ki látható a pénzen?",
-  tasks: [
-    {
-      answers: [
-        {
-          answer: "II. Rákóczi Ferenc",
-          right: true,
-        },
-        {
-          answer: "Lionel Messi",
-          right: false,
-        },
-        {
-          answer: "Milák Kristóf",
-          right: false,
-        },
-      ],
-    },
-    {
-      answers: [
-        {
-          answer: "Mátyás király",
-          right: true,
-        },
-        {
-          answer: "Taylor Swift",
-          right: false,
-        },
-        {
-          answer: "Perselus Piton",
-          right: false,
-        },
-      ],
-    },
-    {
-      answers: [
-        {
-          answer: "Bethlen Gábor",
-          right: true,
-        },
-        {
-          answer: "Cristiano Ronaldo",
-          right: false,
-        },
-        {
-          answer: "Ariana Grande",
-          right: false,
-        },
-      ],
-    },
-    {
-      answers: [
-        {
-          answer: "Gróf Széchenyi István",
-          right: true,
-        },
-        {
-          answer: "Justin Bieber",
-          right: false,
-        },
-        {
-          answer: "Dua Lipa",
-          right: false,
-        },
-      ],
-    },
-    {
-      answers: [
-        {
-          answer: "Szent István király",
-          right: true,
-        },
-        {
-          answer: "Spider-Man",
-          right: false,
-        },
-        {
-          answer: "Vasember",
-          right: false,
-        },
-      ],
-    },
-    {
-      answers: [
-        {
-          answer: "Deák Ferenc",
-          right: true,
-        },
-        {
-          answer: "Szoboszlai Dominik",
-          right: false,
-        },
-        {
-          answer: "Toldi Miklós",
-          right: false,
-        },
-      ],
-    },
-  ],
-};
-
 export const question = [
   {
     id: 0,
-    question: "Mi az okos spórolás első lépése?",
+    question:
+      "Melyik klasszikus magyar édesség készül darált kekszből, kakaóból és kókuszreszelékből?",
     operation: "",
     answers: [
       {
-        answer: "Cél kitűzése (pl. új könyv)",
-        right: true,
-      },
-      {
-        answer: "Véletlenszerű költekezés",
+        answer: "Somlói galuska",
         right: false,
       },
       {
-        answer: "A bevétel elfelejtése",
+        answer: "Kókuszgolyó",
+        right: true,
+      },
+      {
+        answer: "Rákóczi túrós",
+        right: false,
+      },
+      {
+        answer: "Raffaello",
         right: false,
       },
     ],
   },
   {
     id: 1,
-    question: "Miért érdemes zsebpénzt kapni?",
+    question: `Számold ki a titkos kódot! 1.számjegy: 50 (dkg keksz) ÷ 2 (dl tej), 2.számjegy: 2 evőkanál + 20 csepp, 3.számjegy: (200g vaj + 200g kókuszreszelék) ÷ 200g porcukor. Vigyázz van egy kis csavar a kód megoldásában!`,
     operation: "",
-    answers: [
-      {
-        answer: "Hogy gyakoroljuk a pénz beosztását",
-        right: true,
-      },
-      {
-        answer: "Hogy mindent azonnal elköltsünk",
-        right: false,
-      },
-      {
-        answer: "Hogy mindig több legyen, mint a szüleinknek",
-        right: false,
-      },
-    ],
+    rightAnswer: "222",
   },
+
   {
     id: 2,
-    question: "Mit jelent a költségvetés?",
+    question: "Melyik hozzávaló hiányzik a klasszikus kókuszgolyó receptből?",
     operation: "",
     answers: [
       {
-        answer: "Egy terv, hogy mire költöm a pénzem",
+        answer: "Mandula",
+        right: false,
+      },
+      {
+        answer: "Kókuszreszelék",
         right: true,
       },
       {
-        answer: "Egy lista a kedvenc játékokról",
+        answer: "Fahéj",
         right: false,
       },
       {
-        answer: "Egy térkép az iskolába",
-        right: false,
-      },
-    ],
-  },
-  {
-    id: 3,
-    question: "Mire jó a persely?",
-    operation: "",
-    answers: [
-      {
-        answer: "Pénzt gyűjteni benne",
-        right: true,
-      },
-      {
-        answer: "Csak dísznek",
-        right: false,
-      },
-      {
-        answer: "Titkos naplónak",
-        right: false,
-      },
-    ],
-  },
-  {
-    id: 4,
-    question: "Melyik a legjobb, ha szeretnél új biciklit venni?",
-    operation: "",
-    answers: [
-      {
-        answer: "Minden nap félrerakni egy kis pénzt",
-        right: true,
-      },
-      {
-        answer: "Azonnal elkölteni minden zsebpénzt",
-        right: false,
-      },
-      {
-        answer: "Várni, hogy magától megjelenjen a bicikli",
-        right: false,
-      },
-    ],
-  },
-  {
-    id: 5,
-    question: "Mit jelent, ha valaki takarékoskodik?",
-    operation: "",
-    answers: [
-      {
-        answer: "Nem költi el azonnal a pénzét",
-        right: true,
-      },
-      {
-        answer: "Soha nem használ pénzt",
-        right: false,
-      },
-      {
-        answer: "Mindig más pénzét költi",
+        answer: "Méz",
         right: false,
       },
     ],
   },
 
+  {
+    id: 3,
+    question:
+      "A desszert elkészítése 45 perc, majd 2 órát hűl. Ha 15:30-kor kezdték, mikor lesz kész? (ÓÓ:PP)",
+    operation: "",
+    rightAnswer: "18:15",
+  },
+
+  {
+    id: 4,
+    question: "Melyik állítás igaz a hagyományos kókuszgolyóra?",
+    operation: "",
+    answers: [
+      {
+        answer: "Sütőben kell megsütni",
+        right: false,
+      },
+      {
+        answer: "Csak fehércsokoládéból készül",
+        right: false,
+      },
+      {
+        answer: "Sütés nélkül készül",
+        right: true,
+      },
+      {
+        answer: "Fagyasztani kell elkészítés után",
+        right: false,
+      },
+    ],
+  },
 ];
 
 export const nextQrPlace = [

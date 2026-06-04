@@ -1,6 +1,6 @@
 import React from "react";
 
-import LastQuestion from "../components/LastQuestion";
+
 import Puzzle from "../components/puzzle/Puzzle";
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
