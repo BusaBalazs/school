@@ -32,23 +32,23 @@ export const question = [
 
   {
     id: 2,
-    question: "Melyik hozzávaló hiányzik a klasszikus kókuszgolyó receptből?",
+    question: "Melyik hozzávaló nem kell a klasszikus kókuszgolyó recepthez?",
     operation: "",
     answers: [
       {
-        answer: "Mandula",
+        answer: "Tej",
         right: false,
-      },
-      {
-        answer: "Kókuszreszelék",
-        right: true,
       },
       {
         answer: "Fahéj",
+        right: true,
+      },
+      {
+        answer: "kekszmorzsa",
         right: false,
       },
       {
-        answer: "Méz",
+        answer: "rumaroma",
         right: false,
       },
     ],
