@@ -288,7 +288,6 @@ const Questions = () => {
                 className={classes["answer-input"]}
                 placeholder="Írd be a válaszodat"
                 disabled={!answerIsTrue}
-                className="bg-amber-50/60 answer-gsap rounded-lg"
               />
               <button type="submit" className="btn" disabled={!answerIsTrue}>
                 Ellenőriz
